@@ -11,7 +11,7 @@ s.params = {'TOKENIDX': ''}
 r = s.get(baseurl, params=main_page)
 s.params['TOKENIDX'] = r.cookies['LASTTOKEN']
 r = s.get(baseurl, params=main_page)
-
+#use semester and Instructor
 r = s.get(baseurl, params=section_search)
 r2 = s.post(r.request.url, data={
 'VAR1': '18/SP',
